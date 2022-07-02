@@ -12,13 +12,14 @@ To view the Project Kanban board click [here](https://github.com/robcole-dev/cad
 
 
 ## User Stories
-- As a User I can create a new post so that I can get other peoples help or opinions
-- As a User I can edit my posts so that I can correct mistakes in the post
-- As a User I can delete my posts so that I can manage my own posts
-- As a Site Admin I can create, edit and delete posts so that I can manage content on the site
-- As a Site User I can like or dislike posts so that give the user feedback
-- As a User I can view Topics and Posts so that I can select what to read
-- As a User I can register an account so that I can create posts and like / dislike posts
+- As a User I can Create new topics so that I can get other peoples help or opinions
+- As a User I can edit my own topics or replys so that I can correct mistakes
+- As a User I can delete any of my topics or replys so that I can manage my own entries
+- As a User I can create replys to topics so that i can be involved in the conversation
+- As a Site Admin I can create, edit and delete topics / replys so that I can manage any bad behaviour
+- As a User i can like or dislike topics / replys so that I can give feedback to other users
+- As a User I can view Categories and Topics so that I can select what I want to read
+- As a User I can register and account so that I can create, like / dislike Topics / replys
 
 ## UX
 
