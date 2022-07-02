@@ -1,108 +1,97 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Cadius Forums
 
-Welcome USER_NAME,
+The Cadius Forum is a site where gamers can come together and engage in conversation. The site contains topics and unique posts from it's users.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+To visit the live version of the site (hosted by Heroku) click [here]()
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## Project Board
 
-## Gitpod Reminders
+During this project I have been using the project section of Github to manage and track my User Stories progression.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+To view the Project Kanban board click [here](https://github.com/robcole-dev/cadius-forum/projects/1)
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
+## User Stories
+- As a User I can create a new post so that I can get other peoples help or opinions
+- As a User I can edit my posts so that I can correct mistakes in the post
+- As a User I can delete my posts so that I can manage my own posts
+- As a Site Admin I can create, edit and delete posts so that I can manage content on the site
+- As a Site User I can like or dislike posts so that give the user feedback
+- As a User I can view Topics and Posts so that I can select what to read
+- As a User I can register an account so that I can create posts and like / dislike posts
 
-Another blue button should appear to click: _Open Browser_.
+## UX
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### Wireframes and Designs
 
-A blue button should appear to click: _Make Public_,
+Below are a couple of screenshots of flowcharts created for this project.
 
-Another blue button should appear to click: _Open Browser_.
+![Main-Screen](documentation/wireframes/main-screen.jpg)
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+![Topic-View](documentation/wireframes/topic-view.jpg)
 
-To log into the Heroku toolbelt CLI:
+## Features 
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+Below are a list of key features and future features.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### Existing Features
 
-------
 
-## Release History
+### Features Left to implement
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+## Technologies Used
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+During development of the site a number of programs and web based applications were used. You can find a list of the below:
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+## Data Model
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+![Models](documentation/readme/models.jpg)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+- The first model is Topics. This acts like a folder of posts relating to that topic. The only fields required are ID and title.
+- The second model is Posts. This is user created which then allows other users to comment on. This is link to the Topics model via the topics_id key.
+- The third model is Comments. This is for when users comment on a post. This is linked to the Posts model via the post_id key.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+## Testing
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+For all testing, please refer to the [TESTING.md](TESTING.md) file.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+## Deployment
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+The site was deployed to Heroku. The steps to deploy are as follows: 
+- We need to install everything in the requirements.txt file. To do this we run the following command 
+ 
+    ```pip3 install -r requirements.txt```
+- Login / signup to [Heroku](https://id.heroku.com/login)
+- On the dasboard, once logged in, click New and then click Create new app
+- Give the App a name and select your region, then click create app
+- Click settings and then click Reveal config Vars. This is where we need to set a couple of things.
+- in the Key box enter `PORT` and in the value enter `8000`
+- Next we need to add 2 buildpacks. One for python and one for nodejs. Please note that they need to be in an order. python needs to be at the top of the list with nodjs below.
+- Click deploy from the menu at the top, then click github.
+- enter the repositry name and click search. if found the repositry will appear below, click connect.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+[Link to deployed site]()
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### Local Deployment
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+if you would like to make a clone of this repository, you can type the following command in your iDE terminal:
 
-------
+- `git clone `
 
-## FAQ about the uptime script
+Alternatively, if using Git pod, you can click below to create your own workspace using this repository.
 
-**Why have you added this script?**
+[![Open in Git pod](https://gitpod.io/button/open-in-gitpod.svg)]()
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+Please make sure to install the requirements using ```pip3 install -r requirements.txt``` in your terminal
 
-**How will this affect me?**
+## Credits 
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### Content
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+### Acknowledgments
 
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+- 
