@@ -9,7 +9,7 @@ class Reply(models.Model):
     """
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
     description = models.TextField(blank=True)
-    author = models.ForeignKey(User, on_delete=None)
+    author = models.ForeignKey(User, on_delete=models.DO_NOTHING)
     replydate = models.DateTimeField(auto_now_add=True)
 
     class Meta:
