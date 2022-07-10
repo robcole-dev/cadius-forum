@@ -1,3 +1,16 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from django.views import View
+from .models import Topic
 
-# Create your views here.
+
+class TopicList(View):
+
+    def get(self, request, category, *args, **kwargs):
+
+        queryset = Topic.objects.filter(category=category)
+        post = get_object_or_404(queryset)
+
+        return render(
+            request,
+            "topic_detail.html",
+        )

@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from category.views import CategoryList
+from topic.views import TopicList
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', CategoryList.as_view(), name='home')
+    path('', CategoryList.as_view(), name='home'),
+    path('<str:category>/', TopicList.as_view(), name="topics"),
 ]
