@@ -18,10 +18,11 @@ from django.urls import path
 from category.views import CategoryList
 # from topic.views import TopicList
 from topic import views as topic_views
+from reply import views as reply_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', CategoryList.as_view(), name='home'),
-    # path('<int:category>/', TopicList.as_view(), name="topics"),
     path('<int:category_id>/', topic_views.topic_detail, name="topics"),
+    path('<int:category_id>/<int:topic_id>/', reply_views.reply_detail, name="replys"),
 ]

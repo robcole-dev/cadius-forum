@@ -5,10 +5,10 @@
         <div>
             {{% topic.title %}}
             <br>
-            {% for topic in topics %}
+            {% for reply in replys %}
                 {{% reply.description %}}
+                <br>
             {% endfor %}
-            <br><br>
         </div>
     </div>
 {% endblock %}
