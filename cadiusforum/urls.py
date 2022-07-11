@@ -24,5 +24,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', CategoryList.as_view(), name='home'),
     path('<int:category_id>/', topic_views.topic_detail, name="topics"),
-    path('<int:category_id>/<int:topic_id>/', reply_views.reply_detail, name="replys"),
+    path('topics/<int:topic_id>/', reply_views.reply_detail, name="replys"),
 ]

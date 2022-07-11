@@ -6,7 +6,7 @@
             {{ category.name }}
             <br>
             {% for topic in topics %}
-                <a href="{% url 'replys' topic.id2 %}">{{ topic.title }}</a>
+                <a href="{% url 'replys' topic.id %}">{{ topic.title }}</a>
             {% endfor %}
             <br><br>
         </div>

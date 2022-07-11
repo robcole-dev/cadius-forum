@@ -16,3 +16,6 @@ class Topic(models.Model):
 
     class Meta:
         ordering = ['startdate']
+
+    def __str__(self):
+        return self.title
