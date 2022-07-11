@@ -3,11 +3,17 @@
 {% block content %}
     <div>
         <div>
-            {% for topic in topic_list %}
+            <!-- {% for topic in topic_list %}
                 <div>
                   {{topic.title}}
                 </div>
+            {% endfor %} -->
+            {{ category.name }}
+            <br>
+            {% for topic in topics %}
+                {{ topic.title }}
             {% endfor %}
+            <br><br>
         </div>
     </div>
 {% endblock %}
