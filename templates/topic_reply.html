@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+        <div>
+            {{% topic.title %}}
+            <br>
+            {% for topic in topics %}
+                {{% reply.description %}}
+            {% endfor %}
+            <br><br>
+        </div>
+    </div>
+{% endblock %}
