@@ -13,7 +13,7 @@ class Topic(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     startdate = models.DateTimeField(auto_now_add=True)
     closed = models.BooleanField(default=False)
-    description = tinymce_models.HTMLField(blank=True)
+    description = models.TextField(blank=True)
 
     class Meta:
         ordering = ['startdate']

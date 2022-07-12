@@ -9,7 +9,7 @@ class Reply(models.Model):
     Model for Topic replys
     """
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
-    description = tinymce_models.HTMLField(blank=True)
+    description = models.TextField(blank=True)
     author = models.ForeignKey(User, on_delete=models.DO_NOTHING)
     replydate = models.DateTimeField(auto_now_add=True)
 

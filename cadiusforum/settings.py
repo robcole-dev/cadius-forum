@@ -149,12 +149,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # TinyMCE settings
 
-TINYMCE_JS_URL = os.path.join(STATIC_URL, "path/to/tiny_mce/tiny_mce.js")
-
-TINY_DEFAULT_CONFIG = {
+TINYMCE_DEFAULT_CONFIG = {
     "theme": "silver",
-    "height": 500,
-    "menubar": True,
+    "height": "320px",
+    "width": "960px",
+    "menubar": False,
     "plugins": "advlist,autolink,lists,link,image,charmap,print,preview,anchor,"
     "searchreplace,visualblocks,code,fullscreen,insertdatetime,media,table,paste,"
     "code,help,wordcount",
