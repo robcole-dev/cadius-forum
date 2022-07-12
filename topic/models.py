@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from category.models import Category
+from tinymce import models as tinymce_models
 
 
 class Topic(models.Model):
@@ -12,7 +13,7 @@ class Topic(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     startdate = models.DateTimeField(auto_now_add=True)
     closed = models.BooleanField(default=False)
-    description = models.TextField(blank=True)
+    description = tinymce_models.HTMLField(blank=True)
 
     class Meta:
         ordering = ['startdate']

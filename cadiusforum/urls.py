@@ -14,13 +14,14 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from category.views import CategoryList
 # from topic.views import TopicList
 from topic import views as topic_views
 from reply import views as reply_views
 
 urlpatterns = [
+    path('tinymce/', include('tinymce.urls')),
     path('admin/', admin.site.urls),
     path('', CategoryList.as_view(), name='home'),
     path('<int:category_id>/', topic_views.topic_detail, name="topics"),
