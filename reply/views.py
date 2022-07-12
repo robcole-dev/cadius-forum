@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views import View
 from topic.models import Topic
 from .models import Reply
+from .forms import ReplyForm
 
 
 def reply_detail(request, topic_id):
@@ -11,5 +12,6 @@ def reply_detail(request, topic_id):
     context = {
         "topic": topic,
         "replys": replys,
+        "reply_form": ReplyForm(),
     }
     return render(request, template, context)
