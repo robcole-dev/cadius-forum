@@ -3,10 +3,12 @@
 {% block content %}
     <div>
         <div>
-            {{% topic.title %}}
+            {{ topic.title }}
+            <br>
+            {{ topic.description }}
             <br>
             {% for reply in replys %}
-                {{% reply.description %}}
+                {{ reply.description }}
                 <br>
             {% endfor %}
         </div>

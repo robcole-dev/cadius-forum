@@ -14,3 +14,6 @@ class Reply(models.Model):
 
     class Meta:
         ordering = ['replydate']
+
+    def __str__(self):
+        return self.description
