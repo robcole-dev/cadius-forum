@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from topic.models import Topic
+from tinymce import models as tinymce_models
 
 
 class Reply(models.Model):
@@ -8,7 +9,7 @@ class Reply(models.Model):
     Model for Topic replys
     """
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
-    description = models.TextField(blank=True)
+    description = tinymce_models.HTMLField(blank=True)
     author = models.ForeignKey(User, on_delete=models.DO_NOTHING)
     replydate = models.DateTimeField(auto_now_add=True)
 
