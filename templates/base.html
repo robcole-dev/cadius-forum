@@ -15,7 +15,11 @@
         <div>
             <div>Cadius Gaming Forum</div>
             <div><a href="{% url 'home' %}">Home</a></div>
-            <div>Sign in/up</div>
+            {% if user.is_authenticated %}
+            <div><a href="{% url 'account_logout' %}">Logout</a></div>
+            {% else %}
+            <div><a href="{% url 'account_login' %}">Sign in/up</a></div>
+            {% endif %}
         </div>
     </nav>
     <!--Main-->

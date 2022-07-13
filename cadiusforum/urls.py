@@ -22,6 +22,7 @@ from reply import views as reply_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('tinymce/', include('tinymce.urls')),
+    path('accounts/', include('allauth.urls')),
     path('', CategoryList.as_view(), name='home'),
     path('<int:category_id>/', topic_views.topic_detail, name="topics"),
     path('topics/<int:topic_id>/', reply_views.reply_detail, name="replys"),

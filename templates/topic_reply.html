@@ -15,12 +15,14 @@
             {% endfor %}
         </div>
         <div>
+            {% if user.is_authenticated %}
             <h5>Leave a reply:</h5>
             <form method="post">
                 {{ reply_form }}
                 {% csrf_token %}
                 <button type="submit">Submit</button>
             </form>
+            {% endif %}
         </div>
     </div>
 {% endblock %}
