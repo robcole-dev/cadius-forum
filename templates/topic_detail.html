@@ -5,6 +5,8 @@
         <div>
             {{ category.name }}
             <br>
+            <a href="new_topic.html"><i class="fa-solid fa-folder-plus"></i></a>
+            <br>
             {% for topic in topics %}
                 <a href="{% url 'replys' topic.id %}">{{ topic.title }}</a>
             {% endfor %}

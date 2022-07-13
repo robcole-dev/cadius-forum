@@ -7,7 +7,8 @@ class TopicForm(forms.ModelForm):
     """
         Form to allow admins to manage Topics.
     """
-    description = forms.CharField(widget=TinyMCE(attrs={"cols": 30, "rows": 15}))
+    title = forms.CharField()
+    description = forms.CharField(widget=TinyMCE(attrs={}))
 
     class Meta:
         model = Topic

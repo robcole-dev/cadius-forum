@@ -25,5 +25,6 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('', CategoryList.as_view(), name='home'),
     path('<int:category_id>/', topic_views.topic_detail, name="topics"),
+    path('<int:category_id>/', topic_views.new_topic, name="new_topic"),
     path('topics/<int:topic_id>/', reply_views.reply_detail, name="replys"),
 ]
