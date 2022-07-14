@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'cloudinary',
+    'crispy_forms',
     'tinymce',
     'category',
     'topic',
@@ -60,6 +61,8 @@ SITE_ID = 1
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+CRISPY_TEMPLATE_PACK = 'Bootstrap 5'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
