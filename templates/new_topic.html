@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% load crispy_forms_tags %}
+
 {{ topic_form.media }}
 
 {% block content %}
@@ -7,7 +9,7 @@
         <div>
             {{ category.name }}
             <form method="post">
-                {{ topic_form }}
+                {{ topic_form | crispy }}
                 {% csrf_token %}
                 <button type="submit">Submit</button>
             </form>
