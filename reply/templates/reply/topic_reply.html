@@ -8,6 +8,30 @@
             {{ topic.title }}
             <br>
             {{ topic.description|safe }}
+            {% if topic.author == request.user %}
+                <a href="{% url 'edit_topic' category_id topic.id %}" class="btn btn-primary">Edit</a>
+                <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal-{{ topic.id }}">Delete</a>
+                <!-- Delete Modal -->
+                <div class="modal fade" id="modal-{{ topic.id }}" tabindex="-1" aria-labelledby="modal-{{ topic.id }}-Label" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="modal-{{ topic.id }}-Label">Delete Topic</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        Are you sure you want to delete {{ topic.title }}?
+                        <br>
+                        <small class="text-muted">Deleting this will delete all related replies</small>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                        <a href="{% url 'delete_topic' category_id topic.id %}" class="btn btn-danger">Yes</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            {% endif %}
             <br>
             {% for reply in replys %}
                 {{ reply.description|safe }}
