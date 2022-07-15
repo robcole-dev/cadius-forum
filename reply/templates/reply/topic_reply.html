@@ -7,10 +7,10 @@
         <div>
             {{ topic.title }}
             <br>
-            {{ topic.description }}
+            {{ topic.description|safe }}
             <br>
             {% for reply in replys %}
-                {{ reply.description }}
+                {{ reply.description|safe }}
                 <br>
             {% endfor %}
         </div>
