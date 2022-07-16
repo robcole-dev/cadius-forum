@@ -35,6 +35,7 @@
             <br>
             {% for reply in replys %}
                 {{ reply.description|safe }}
+                <a href="{% url 'edit_reply' category_id topic.id reply.id %}" class="btn btn-primary">Edit</a>
                 <br>
             {% endfor %}
         </div>
