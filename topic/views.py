@@ -29,7 +29,8 @@ def new_topic(request, category_id):
             topic = topic_form.save()
             topic_id = topic.pk
             messages.success(request, 'Topic Added')
-            return redirect(reverse('topic_detail', args=[category_id, topic_id]))
+            return redirect(reverse(
+                'topic_detail', args=[category_id, topic_id]))
         messages.error(request, "Try again!")
 
     template = "topic/new_topic.html"
@@ -54,7 +55,8 @@ def edit_topic(request, category_id, topic_id):
             topic_form.instance.category = category
             topic_form.save()
             messages.success(request, 'Topic Updated')
-            return redirect(reverse('topic_detail', args=[category_id, topic_id]))
+            return redirect(reverse(
+                'topic_detail', args=[category_id, topic_id]))
         messages.error(request, "Try again!")
 
     template = "topic/edit_topic.html"
