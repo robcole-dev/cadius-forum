@@ -35,11 +35,13 @@
             <br>
             {% for reply in replys %}
                 {{ reply.description|safe }}
-                <a href="{% url 'edit_reply' category_id topic.id reply.id %}" class="btn btn-primary">Edit</a>
+                {% if reply.author == request.user %}
+                <a href="{% url 'edit_reply' category_id topic.id reply.id %}#form" class="btn btn-primary">Edit</a>
+                {% endif %}
                 <br>
             {% endfor %}
         </div>
-        <div>
+        <div id="form">
             {% if user.is_authenticated %}
             <h5>Leave a reply:</h5>
             <form method="post">
