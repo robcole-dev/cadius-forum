@@ -38,6 +38,7 @@ def topic_detail(request, category_id, topic_id):
 def edit_reply(request, category_id, topic_id, reply_id):
     category = get_object_or_404(Category, id=category_id)
     topic = get_object_or_404(Topic, id=topic_id)
+    replys = Reply.objects.filter(topic=topic)
     reply = get_object_or_404(Reply, id=reply_id)
     if reply.author != request.user:
         messages.error(request, "You are not the Author!")
@@ -54,11 +55,11 @@ def edit_reply(request, category_id, topic_id, reply_id):
                 'topic_detail', args=[category_id, topic_id]))
         messages.error(request, "Try again!")
 
-    template = "reply/edit_reply.html"
+    template = "reply/topic_detail.html"
     context = {
         "category_id": category_id,
         "topic": topic,
-        "replys": reply,
+        "replys": replys,
         "reply_form": reply_form,
     }
     return render(request, template, context)
