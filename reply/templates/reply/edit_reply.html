@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% load crispy_forms_tags %}
+
+{{ reply_form.media }}
+
+{% block content %}
+    <div>
+        <div>
+            {{ topic.title }}
+            {{ topic.description }}
+            <form method="post">
+                {{ reply_form|crispy }}
+                {% csrf_token %}
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
