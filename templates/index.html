@@ -2,11 +2,12 @@
 
 {% block content %}
     <div>
-        <div>
+        <div class="container">
             {% for cat in category_list %}
-                <div>
+                <div class="bg-primary bg-gradient">
                   <a href="{% url 'category_detail' cat.id %}">{{cat.name}}</a>
                 </div>
+                <br>
             {% endfor %}
         </div>
     </div>
