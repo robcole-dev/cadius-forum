@@ -2,17 +2,22 @@
 
 {% block content %}
     <div>
-        <div>
-            {{ category.name }}
-            <br>
+        <div class="row bg-dark bg-gradient bg-opacity-50">
+            <p class="col-8 text-center fs-1 fw-bold">{{ category.name }}</p>
             {% if user.is_authenticated %}
-            <a href="{% url 'new_topic' category.id %}"><i class="fas fa-folder-plus"></i></a>
+            <a class="col-4 text-center fs-1 fw-bold fontawe" href="{% url 'new_topic' category.id %}"><i class="fas fa-plus-square"></i></a>
             {% endif %}
-            <br>
+        </div>
+        <div class="container gy-5">
             {% for topic in topics %}
-                <a href="{% url 'topic_detail' category.id topic.id %}">{{ topic.title }}</a>
+            <div class="row">
+                <a class="col" href="{% url 'topic_detail' category.id topic.id %}">{{ topic.title }}</a>
+                <div class="col">
+                    {{ topic.author }}
+                    {{ topic.startdate }}
+                </div>
+            </div>
             {% endfor %}
-            <br><br>
         </div>
     </div>
 {% endblock %}
