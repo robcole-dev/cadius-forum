@@ -1,5 +1,16 @@
 /* Custom none bootstrap css */
 
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Road+Rage&display=swap');
+
 .fontawe {
     color: black;
+}
+
+.kanit {
+    font-family: Kanit, sans-serif;
+}
+
+.roadrage {
+    font-family: 'Road Rage', sans-serif;
 }
