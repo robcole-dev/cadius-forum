@@ -16,3 +16,12 @@
     font-family: Kanit, sans-serif;
     height: 75px;
 }
+
+.mainreply {
+    font-family: Kanit, sans-serif;
+    height: 50px;
+}
+
+p {
+    margin-bottom: 0;
+}
