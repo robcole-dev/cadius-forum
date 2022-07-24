@@ -7,18 +7,12 @@
     color: black;
 }
 
-.kanit {
-    font-family: Kanit, sans-serif;
-}
-
-.roadrage {
-    font-family: 'Road Rage', sans-serif;
-}
-
 .category {
+    font-family: Kanit, sans-serif;
     height: 75px;
 }
 
 .topic {
+    font-family: Kanit, sans-serif;
     height: 75px;
 }
