@@ -4,7 +4,7 @@
     <div>
         <div class="container gy-5">
             {% for cat in category_list %}
-                <div class="d-flex bg-secondary bg-gradient rounded-4 vh-25 mb-1 mt-1 text-center align-items-center justify-content-center fs-1 category">
+                <div class="d-flex bg-secondary bg-gradient rounded-4 vh-25 mb-1 mt-1 align-items-center justify-content-center fs-1 category">
                     <a class="text-white text-decoration-none" href="{% url 'category_detail' cat.id %}">{{cat.name}}</a>
                 </div>
             {% endfor %}
