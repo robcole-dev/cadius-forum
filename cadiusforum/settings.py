@@ -162,6 +162,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 TINYMCE_DEFAULT_CONFIG = {
     "menubar": False,
-    "plugins": "qucikbars,lists,advlist,autolink,link,preview,searchreplace,table,paste,help,wordcount",
-    "toolbar": "undo redo bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist ",
+    "plugins": "lists autolink link searchreplace paste wordcount",  # noqa
+    "toolbar": "undo redo bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist",  # noqa
 }
