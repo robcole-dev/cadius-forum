@@ -1,5 +1,6 @@
 from datetime import date
 from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from category.models import Category
@@ -37,6 +38,7 @@ def new_topic(request, category_id):
     context = {
         "category": category,
         "topic_form": topic_form,
+        "TINYMCE_API": settings.TINYMCE_API,
     }
     return render(request, template, context)
 
@@ -64,6 +66,7 @@ def edit_topic(request, category_id, topic_id):
         "category": category,
         "topic": topic,
         "topic_form": topic_form,
+        "TINYMCE_API": settings.TINYMCE_API,
     }
     return render(request, template, context)
 

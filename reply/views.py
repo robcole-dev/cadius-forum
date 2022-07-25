@@ -1,5 +1,6 @@
 from datetime import datetime
 from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from category.models import Category
@@ -29,7 +30,8 @@ def topic_detail(request, category_id, topic_id):
         "category_id": category_id,
         "topic": topic,
         "replys": replys,
-        "reply_form": ReplyForm()
+        "reply_form": ReplyForm(),
+        "TINYMCE_API": settings.TINYMCE_API,
     }
     return render(request, template, context)
 
@@ -61,5 +63,6 @@ def edit_reply(request, category_id, topic_id, reply_id):
         "topic": topic,
         "replys": replys,
         "reply_form": reply_form,
+        "TINYMCE_API": settings.TINYMCE_API,
     }
     return render(request, template, context)
