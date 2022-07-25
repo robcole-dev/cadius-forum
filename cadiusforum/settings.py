@@ -160,6 +160,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # TinyMCE settings
 
+TINYMCE_API = os.environ.get("TINYMCE_API")
+
 TINYMCE_DEFAULT_CONFIG = {
     "menubar": False,
     "plugins": "lists autolink link searchreplace paste wordcount autoresize",  # noqa
