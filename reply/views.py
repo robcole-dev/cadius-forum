@@ -30,7 +30,7 @@ def topic_detail(request, category_id, topic_id):
         "category_id": category_id,
         "topic": topic,
         "replys": replys,
-        "reply_form": ReplyForm(),
+        "reply_form": reply_form,
         "TINYMCE_API": settings.TINYMCE_API,
     }
     return render(request, template, context)
