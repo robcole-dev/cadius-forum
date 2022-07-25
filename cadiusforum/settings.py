@@ -160,6 +160,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # TinyMCE settings
 
+TINYMCE_JS_URL = "https://cdn.tiny.cloud/1/kk4swkb04vqedmk7habq01q02njy7r7t9fe67ofq3onk1o1p/tinymce/6/tinymce.min.js"  # noqa
+TINYMCE_COMPRESSOR = False
+
 TINYMCE_DEFAULT_CONFIG = {
     "theme": "silver",
     "height": "320px",
