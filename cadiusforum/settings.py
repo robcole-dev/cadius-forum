@@ -160,18 +160,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # TinyMCE settings
 
-TINYMCE_JS_URL = "https://cdn.tiny.cloud/1/kk4swkb04vqedmk7habq01q02njy7r7t9fe67ofq3onk1o1p/tinymce/6/tinymce.min.js"  # noqa
-TINYMCE_COMPRESSOR = False
-
 TINYMCE_DEFAULT_CONFIG = {
-    "theme": "silver",
-    "height": "320px",
-    "width": "960px",
     "menubar": False,
-    "plugins": "advlist,autolink,lists,link,charmap,print,preview,anchor,"
-    "searchreplace,visualblocks,code,fullscreen,insertdatetime,table,paste,"
-    "code,wordcount",
-    "toolbar": "undo redo | formatselect | "
-    "bold italic backcolor | alignleft aligncenter "
-    "alignright alignjustify | bullist numlist outdent indent | ",
+    "plugins": "qucikbars,lists,advlist,autolink,link,preview,searchreplace,table,paste,help,wordcount",
+    "toolbar": "undo redo bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist ",
 }
