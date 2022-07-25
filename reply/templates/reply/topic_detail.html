@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 
-{{ reply_form.media }}
+{% block head %}
+    <!-- TINYMCE Widget  -->
+    {{ reply_form.media }}
+{% endblock %}
 
 {% block content %}
     <div>

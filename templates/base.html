@@ -9,8 +9,7 @@
     <script src="https://cdn.tiny.cloud/1/kk4swkb04vqedmk7habq01q02njy7r7t9fe67ofq3onk1o1p/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>Cadius Forum</title>
-    {{ reply_form.media }}
-    {{ topic_form.media }}
+    {% block head %}{% endblock %}
 </head>
 <body>
     <!--Navigation-->
