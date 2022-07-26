@@ -23,6 +23,7 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = ["cadiusforum.herokuapp.com", "localhost"]
 
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 # Application definition
 
