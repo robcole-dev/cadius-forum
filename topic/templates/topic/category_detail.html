@@ -11,8 +11,8 @@
         <div class="container gy-5">
             {% for topic in topics %}
             <div class="row bg-dark bg-gradient bg-opacity-25 rounded topic">
-                <a class="col d-flex fs-3 align-items-center text-black text-decoration-none" href="{% url 'topic_detail' category.id topic.id %}">{{ topic.title }}</a>
-                <div class="col d-flex align-items-center justify-content-end">
+                <a class="col fs-3 align-middle text-black text-decoration-none" href="{% url 'topic_detail' category.id topic.id %}">{{ topic.title }}</a>
+                <div class="col col-sm-5 col-md-4 col-lg-3 col-xl-2 align-items-center justify-content-start">
                     {{ topic.author }}
                     <br>
                     {{ topic.startdate }}
