@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'cloudinary',
     'crispy_forms',
+    'tinymce',
     'category',
     'topic',
     'reply',
