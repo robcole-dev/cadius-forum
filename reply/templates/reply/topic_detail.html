@@ -42,10 +42,13 @@
         <div>
             {% for reply in replys %}
             <div class="container">
-                <div class="mt-3 bg-info bg-opacity-50 rounded">
+                <div class="mt-3 bg-info bg-opacity-50 rounded-top">
                     {{ reply.description|safe }}
+                </div>
+                <div class="col bg-info bg-opacity-25 rounded-bottom">
+                    {{ reply.author }} - {{ reply.replydate }}
                     {% if reply.author == request.user %}
-                    <a class="justify-content-md-end btn btn-secondary btn-sm" href="{% url 'edit_reply' category_id topic.id reply.id %}#form">Edit</a>
+                    <a class="justify-content-md-end" href="{% url 'edit_reply' category_id topic.id reply.id %}#form">Edit</a>
                     {% endif %}
                 </div>
             </div>
