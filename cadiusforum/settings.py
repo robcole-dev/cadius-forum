@@ -166,7 +166,8 @@ TINYMCE_DEFAULT_CONFIG = {
     "menubar": False,
     "plugins": "lists autolink link searchreplace paste wordcount autoresize",  # noqa
     "toolbar": "undo redo bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist",  # noqa
-    "width": "100%"
+    "width": "100%",
+    "content_css": "bg-secondary bg-opacity-100 text-white rounded-bottom",
 }
 
 TINYMCE_COMPRESSOR = False
