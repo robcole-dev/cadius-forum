@@ -1,5 +1,12 @@
 {% extends "base.html" %}
 
+{% block nav %}
+    <ol class="col-8 breadcrumb align-middle ps-5">
+        <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+        <li class="breadcrumb-item active text-white" aria-current="page">{{ category.name }}</li>
+    </ol>
+{% endblock %}
+
 {% block content %}
     <div>
         <div class="row bg-dark bg-gradient">
@@ -8,7 +15,7 @@
             <a class="col-4 text-center text-white fs-1 fw-bold fontawe" href="{% url 'new_topic' category.id %}"><i class="fas fa-plus-square"></i></a>
             {% endif %}
         </div>
-        <div class="container gy-5">
+        <div class="container gy-5 mt-2">
             {% for topic in topics %}
             <div class="row bg-dark bg-gradient bg-opacity-75 rounded topic">
                 <a class="col fs-3 align-middle text-white text-decoration-none" href="{% url 'topic_detail' category.id topic.id %}">{{ topic.title }}</a>

@@ -28,6 +28,7 @@ def topic_detail(request, category_id, topic_id):
     template = "reply/topic_detail.html"
     context = {
         "category_id": category_id,
+        "category": category,
         "topic": topic,
         "replys": replys,
         "reply_form": reply_form,

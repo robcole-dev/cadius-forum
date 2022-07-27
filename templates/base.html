@@ -36,6 +36,13 @@
             </div>
         </div>
     </nav>
+    <nav aria-label="breadcrumb" >
+        <div class="bg-dark bg-gradient align-middle">
+            {% block nav%}
+
+            {% endblock %}
+        </div>
+    </nav>
     {% if messages %}
     <section id="alerts">
         {% for msg in messages %}

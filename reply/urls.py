@@ -1,5 +1,6 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
+from topic import urls
 
 urlpatterns = [
     path(
@@ -8,4 +9,5 @@ urlpatterns = [
     path(
         'edit/category/<int:category_id>/topic/<int:topic_id>/reply/<int:reply_id>',  # noqa
         views.edit_reply, name="edit_reply"),
+    path('topics/', include('topic.urls')),
 ]
