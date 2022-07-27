@@ -14,7 +14,7 @@ To view the Project Kanban board click [here](https://github.com/robcole-dev/cad
 ## User Stories
 - As a User I can Create new topics so that I can get other peoples help or opinions
 - As a User I can edit my own topics or replys so that I can correct mistakes
-- As a User I can delete any of my topics or replys so that I can manage my own entries
+- As a User I can delete any of my topics so that I can manage my own entries
 - As a User I can create replys to topics so that i can be involved in the conversation
 - As a Site Admin I can create, edit and delete topics / replys so that I can manage any bad behaviour
 - As a User I can view Categories and Topics so that I can select what I want to read
