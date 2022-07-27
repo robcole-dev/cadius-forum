@@ -1,6 +1,6 @@
 # Cadius Forums
 
-The Cadius Forum is a site where gamers can come together and engage in conversation. The site contains topics and unique posts from it's users.
+The Cadius Forum is a site where gamers come together and engage in conversation. The site contains topics and unique posts from it's users.
 
 To visit the live version of the site (hosted by Heroku) click [here](https://cadiusforum.herokuapp.com/)
 
