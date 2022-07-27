@@ -61,6 +61,7 @@ def edit_reply(request, category_id, topic_id, reply_id):
     template = "reply/topic_detail.html"
     context = {
         "category_id": category_id,
+        "category": category,
         "topic": topic,
         "replys": replys,
         "reply_form": reply_form,
