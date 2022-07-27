@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     'category',
     'topic',
     'reply',
-    'like',
 ]
 
 SITE_ID = 1
