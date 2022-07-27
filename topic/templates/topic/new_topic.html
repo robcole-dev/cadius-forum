@@ -5,13 +5,13 @@
     {{ topic_form.media }}
 {% endblock %}
 {% block content %}
-    <div class="text-white">
-        <div>
-            {{ category.name }}
+    <div class="container text-white">
+        <div class="row d-flex vh-25 mb-1 mt-1 align-items-center justify-content-center fs-1">
+            <p class="bg-dark bg-opacity-100">{{ category.name }}</p>
             <form method="post">
                 {{ topic_form | crispy }}
                 {% csrf_token %}
-                <button type="submit">Submit</button>
+                <button class="btn btn-success" type="submit">Submit</button>
             </form>
         </div>
     </div>
