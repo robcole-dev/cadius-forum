@@ -154,11 +154,11 @@ The site was deployed to Heroku. The steps to deploy are as follows:
 
 if you would like to make a clone of this repository, you can type the following command in your iDE terminal:
 
-- `git clone `
+- `git clone https://github.com/robcole-dev/cadius-forum.git`
 
 Alternatively, if using Git pod, you can click below to create your own workspace using this repository.
 
-[![Open in Git pod](https://gitpod.io/button/open-in-gitpod.svg)]()
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/robcole-dev/cadius-forum)
 
 Please make sure to install the requirements using ```pip3 install -r requirements.txt``` in your terminal
 
