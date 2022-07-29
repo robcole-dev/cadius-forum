@@ -100,21 +100,21 @@ During development of the site a number of programs and web based applications w
 
 Plugins that was used to develop this site are:
 
-[Bootstrap](https://getbootstrap.com/)
+[Bootstrap](https://getbootstrap.com/) - Used to apply style to the project
 
-[Django](https://www.djangoproject.com/)
+[Django](https://www.djangoproject.com/) - Used for the project framework
 
-[TinyMCE](https://www.tiny.cloud/)
+[TinyMCE](https://www.tiny.cloud/) - Used for the text editors on screen
 
-[Django-AllAuth](https://django-allauth.readthedocs.io/en/latest/overview.html)
+[Django-AllAuth](https://django-allauth.readthedocs.io/en/latest/overview.html) - Used for account registration, sign in and sign out
 
 Code that was used to develop this site are:
 
-[Python](https://www.python.org/)
+[Python](https://www.python.org/) - Used for backend coding
 
-[HTML5](https://en.wikipedia.org/wiki/HTML5)
+[HTML5](https://en.wikipedia.org/wiki/HTML5) - Used for front end styling
 
-[CSS3](https://en.wikipedia.org/wiki/CSS)
+[CSS3](https://en.wikipedia.org/wiki/CSS) - Used for custom styling not covered by bootstrap
 
 ## Data Model
 
