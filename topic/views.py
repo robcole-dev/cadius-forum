@@ -9,6 +9,9 @@ from .forms import TopicForm
 
 
 def category_detail(request, category_id):
+    """
+    View to display Topics
+    """
     category = get_object_or_404(Category, id=category_id)
     topics = Topic.objects.filter(category=category)
     template = "topic/category_detail.html"
@@ -21,6 +24,9 @@ def category_detail(request, category_id):
 
 @login_required
 def new_topic(request, category_id):
+    """
+    View call to create a new topic from the topic forms
+    """
     category = get_object_or_404(Category, id=category_id)
     topic_form = TopicForm(request.POST or None)
     if request.method == 'POST':
@@ -45,6 +51,9 @@ def new_topic(request, category_id):
 
 @login_required
 def edit_topic(request, category_id, topic_id):
+    """
+    Function call to edit a topic from the topic forms
+    """
     category = get_object_or_404(Category, id=category_id)
     topic = get_object_or_404(Topic, id=topic_id)
     if topic.author != request.user:
@@ -73,6 +82,9 @@ def edit_topic(request, category_id, topic_id):
 
 @login_required
 def delete_topic(request, category_id, topic_id):
+    """
+    Function call to delete a topic.
+    """
     category = get_object_or_404(Category, id=category_id)
     topic = get_object_or_404(Topic, id=topic_id)
     if topic.author != request.user:

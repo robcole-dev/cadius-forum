@@ -10,6 +10,9 @@ from .forms import ReplyForm
 
 
 def topic_detail(request, category_id, topic_id):
+    """
+    Display the list of topics for the category navigated to
+    """
     category = get_object_or_404(Category, id=category_id)
     topic = get_object_or_404(Topic, id=topic_id)
     replys = Reply.objects.filter(topic=topic)
@@ -39,6 +42,9 @@ def topic_detail(request, category_id, topic_id):
 
 @login_required
 def edit_reply(request, category_id, topic_id, reply_id):
+    """
+    Edit reply function for the reply being edited
+    """
     category = get_object_or_404(Category, id=category_id)
     topic = get_object_or_404(Topic, id=topic_id)
     replys = Reply.objects.filter(topic=topic)
