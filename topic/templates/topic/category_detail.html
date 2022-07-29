@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block nav %}
+    <!-- Breadcrumb Navigation links -->
     <ol class="col-8 breadcrumb align-middle ps-5">
         <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
         <li class="breadcrumb-item active text-white" aria-current="page">{{ category.name }}</li>
@@ -9,12 +10,14 @@
 
 {% block content %}
     <div>
+        <!-- Category Name -->
         <div class="row bg-dark bg-gradient">
             <p class="col-8 text-center text-white fs-1 fw-bold">{{ category.name }}</p>
             {% if user.is_authenticated %}
             <a class="col-4 text-center text-white fs-1 fw-bold fontawe" href="{% url 'new_topic' category.id %}"><i class="fas fa-plus-square"></i></a>
             {% endif %}
         </div>
+        <!-- Topic list -->
         <div class="container gy-5 mt-2">
             {% for topic in topics %}
             <div class="row bg-dark bg-gradient bg-opacity-75 rounded topic">
